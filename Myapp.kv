@@ -1,0 +1,47 @@
+MDScreen:
+    md_bg_color : [0,255,255]
+    MDCard:
+        size_hint:None,None
+        size:350,420
+        pos_hint:{"center_x":0.5,"center_y":.5}
+        elevation:5
+        orientation:"vertical"
+        MDLabel:
+            text:"Login"
+            font_style:"Button"
+            font_size:25
+            halign:"center"
+
+
+
+        MDTextField:
+            id:data
+            hint_text:"Username"
+
+            icon_right:"account"
+            size_hint_x:0.7
+            width:220
+            halign:"center"
+
+            pos_hint:{"center_x":0.5}
+
+        MDTextField:
+            id:data1
+            hint_text:"Password"
+            helper_text:"Forgot password"
+            icon_right:"eye-off"
+            size_hint_x:0.7
+            halign:"center"
+            password_mask:"*"
+            width:220
+            pos_hint:{"center_x":0.5}
+            password:True
+        MDRaisedButton:
+            text:"Login"
+            button_size:10
+            pos_hint:{"center_x":0.5}
+            on_press:app.data()
+
+
+        Widget:
+            size_hint_y:None
